@@ -27,7 +27,7 @@ Each version will reflect my latest skills, projects, and goals.
 
 ## 📬 Contact
 
-Feel free to reach out: [your-email@example.com](mailto:your-email@example.com)
+Feel free to reach out: [ianazana.phi@gmail.com](mailto:your-email@example.com)
 
 ---
 
