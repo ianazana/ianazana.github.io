@@ -1,0 +1,306 @@
+body {
+    background: #EFE6F6;
+    background: -webkit-linear-gradient(90deg, rgba(239, 230, 246, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(240, 232, 246, 1) 100%);
+    background: -moz-linear-gradient(90deg, rgba(239, 230, 246, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(240, 232, 246, 1) 100%);
+    background: linear-gradient(90deg, rgba(239, 230, 246, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(240, 232, 246, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#EFE6F6", endColorstr="#F0E8F6", GradientType=1);
+    color: #222831;
+    padding: 3rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom:2rem;
+   
+}
+
+.logo{
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+/* Contact btn */
+.btn:hover .btn-slide-show-text1 {
+  margin-left: 65px;
+} 
+ 
+.btn-moving-gradient {
+  height: 55px;
+  width: 200px;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  z-index: 100;
+} 
+ 
+.btn-moving-gradient:hover {
+  transition: 0.5s ease-in-out;
+  background-position: 100% 0px;
+} 
+ 
+.btn-moving-gradient--purple {
+  background-image: linear-gradient(90deg, rgb(62, 53, 141), rgb(135, 53, 141), rgb(106, 53, 141), rgb(61, 52, 139));
+  box-shadow: rgb(135, 53, 141) 0px 4px 15px 0px;
+} 
+
+/* MAIN */
+
+main {
+    overflow: hidden;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 3rem;
+}
+
+main h1 {
+    text-align: center;
+    height: 100%;
+    font-size: 20rem;
+    font-weight: 600;
+    line-height: 1;
+    background: #87358D;
+    background: linear-gradient(90deg, rgba(135, 53, 141, 1) 0%, rgba(62, 53, 141, 1) 79%);
+    color: transparent;
+    background-clip: text;
+}
+
+/* Location Section */
+.location {
+    position: absolute;
+    top: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.location p {
+    background: #87358D;
+    background: linear-gradient(90deg, rgba(135, 53, 141, 1) 0%, rgba(62, 53, 141, 1) 79%);
+    color: transparent;
+    background-clip: text;
+    font-size: 1.5rem;
+}
+
+/* Bio Section */
+.bio-section {
+    margin-top: auto;
+    margin-bottom: 2rem;
+}
+
+.bio {
+    position: absolute;
+    bottom: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 300;
+    letter-spacing: 1px;
+    max-width: 22rem;
+    color: #222831;
+}
+
+/* Scroll Down Button */
+.scroll-down {
+    height: 5rem;
+    width: 2rem;
+    position: absolute;
+    right: 2%;
+    bottom: 5%;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(62, 53, 141, 1);
+}
+
+.scroll-down::before, .scroll-down::after {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    transform: translate(-50%, -100%) rotate(45deg);
+    border: 2px solid rgba(62, 53, 141, 1);
+    border-top: transparent;
+    border-left: transparent;
+    animation: scroll-down 3s ease-in-out infinite;
+}
+
+.scroll-down::before {
+    top: 30%;
+    animation-delay: 0.8s
+}
+
+@keyframes scroll-down {
+    0% {
+        opacity: 0;
+    }
+    30%,60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        top:90%;
+    }
+}
+
+/* Planet 3D */
+.planet-3D {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Bento-Section */
+
+.about-section{
+    width: 100%;
+    margin-top: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-title {
+    margin-bottom: 5%;
+    font-size: 5rem;
+    background-image: linear-gradient(90deg, rgba(135, 53, 141, 1) 0%, rgba(62, 53, 141, 1) 79%);
+    color: transparent;
+    background-clip: text;
+}
+
+.bento-grid {
+    position: relative;
+    display: grid;
+    height: 90vh;
+    width: 95%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "intro intro tech"
+        "time passion tech";
+    gap: 1.5rem;
+}
+
+.card{
+    background: linear-gradient(90deg, rgba(135, 53, 141, 1) 0%, rgba(62, 53, 141, 1) 79%);
+    border: 0.5px solid rgba(62, 53, 141, 1);
+    border-radius: 24px;
+    transition: transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+    position:relative;
+    overflow: hidden;
+    --x: 50%;
+    --y: 50%;
+
+}
+    .intro{grid-area: intro; min-height: 300px;}
+    .tech{grid-area: tech; min-height: 450px;}
+    .time{grid-row: time; min-height: 220px;}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 20px rgba(62, 53, 141, 0.5);
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 0;
+    background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(255, 255, 255, 0.2), transparent 40%);
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+
+.card-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.card-text {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #FBF5DE;
+    margin: 0 1rem 1rem 1rem;
+    max-width: 30rem;
+}
+
+.bento-grid .background-image {
+    position: absolute;
+    inset: -1% -1% -1% -1%;
+    z-index: -1;
+    width: 110%;
+    height: 110%;
+    object-fit: cover;
+}
+
+
+.model-box {
+    position: absolute;
+    right: 5%;
+    top: -31%;
+    width: 30rem;
+    height: 30rem;
+}
+
+.info-3D {
+    width: 150%;
+    height: 150%;
+    mix-blend-mode: lighten;
+}
+  
+.bento-grid .skills-group {
+    position: absolute;
+    bottom: 5%;
+    left: 15%;
+    width: 70%;
+}
+
+.bento-grid .btn {
+    position: absolute;
+    bottom: 10%;
+    padding: 0.75rem 1.5rem;
+    background-color: rgba(124, 233, 230, 0.1);
+    color: #76b0ab;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.bento-grid .btn:hover {
+    background-color: #76b0ab;
+    color: black;
+}
+
